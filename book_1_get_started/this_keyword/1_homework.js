@@ -5,9 +5,15 @@ function classroom(teacher) {
 }
 var assignment = classroom('Kyle');
 
-Пример: var homework = {
+var homework = {
   topic: 'JS',
   assignment: assignment,
 };
 
-homework.assignment();
+// homework.assignment();
+
+var otherHomework = {
+  topic: 'Math',
+};
+
+assignment.call(otherHomework);
