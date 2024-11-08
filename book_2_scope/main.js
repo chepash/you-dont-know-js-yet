@@ -11,22 +11,42 @@ function sortNamesByLength(names) {
   }
 
   {
-    // блок для сужения области видимости
-    let sortedNames = [];
-
+    // блок1 для сужения области видимости
+    let sortedNames1 = [];
     for (let bucket of buckets) {
       if (bucket) {
         // каждый массив сортируется по алфавиту
         bucket.sort();
         // присоединить отсортированные имена
         // к текущему списку
-        sortedNames = [...sortedNames, ...bucket];
+        sortedNames1 = [...sortedNames1, ...bucket];
       }
     }
-
-    return sortedNames;
   }
+
+  {
+    // блок2 для сужения области видимости
+    let sortedNames2 = [];
+    for (let bucket of buckets) {
+      if (bucket) {
+        // каждый массив сортируется по алфавиту
+        bucket.sort();
+        // присоединить отсортированные имена
+        // к текущему списку
+        sortedNames1 = [...sortedNames, ...bucket];
+      }
+    }
+  }
+
+  return [sortedNames1, sortedNames2];
 }
 
 sortNamesByLength(['Sally', 'Suzy', 'Frank', 'John', 'Jennifer', 'Scott']);
 // [ "John", "Suzy", "Frank", "Sally", "Scott", "Jennifer" ]
+
+try {
+  let someCosnt;
+  const someConst2 = 213;
+} catch {
+  someConst2;
+}
