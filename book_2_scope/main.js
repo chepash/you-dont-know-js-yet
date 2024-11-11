@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-function sortNamesByLength(names) {
+function sortNаmesByLength(names) {
   var buckets = [];
 
   for (let firstName of names) {
